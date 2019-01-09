@@ -2,3 +2,4 @@ venv
 __ipycache__
 *.pyc
 db.sqlite3
+.vscode
