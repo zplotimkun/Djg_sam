@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <a href="{%url 'add_post' %}"><button type="button">New</button></a>
+    <br>
+    {% for post in posts %}
+    {{post.pk}}  {{post.title}}-{{post.content}} 
+    <a href="{% url 'delete_post' pk=post.pk%}"><button>Delete</button></button></a>
+    <a href="{% url 'edit_post' pk=post.pk%}"><button>edit</button></button></a>
+    <br>
+    {% endfor %}
+</body>
+</html>
